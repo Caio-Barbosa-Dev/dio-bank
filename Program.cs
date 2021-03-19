@@ -51,7 +51,7 @@ namespace TransferenciaBancaria
 
         private static void Transferir()
         {
-            Console.WriteLine("Fazer Transferencia");
+            Console.WriteLine("|Fazer uma Transferencia|");
             Console.Write("Digite o numero da conta de origem: ");
             int indiceContaOrigem = int.Parse(Console.ReadLine());
 
@@ -66,12 +66,17 @@ namespace TransferenciaBancaria
                 return;
             }
 
-            Console.WriteLine("|Resumo da Transferencia|");
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("\tResumo da Transferencia");
+            Console.WriteLine("---------------------------------------");
             listaContas[indiceContaOrigem].Transferir(valorTransferencia, listaContas[indiceContaDestino]);
+            Console.WriteLine("---------------------------------------");
         }
 
         private static void Sacar()
         {
+
+            Console.WriteLine("|Fazer um Saque|");
             Console.Write("Digite o numero da conta: ");
             int indiceConta = int.Parse(Console.ReadLine());
 
@@ -89,6 +94,7 @@ namespace TransferenciaBancaria
 
         private static void Depositar()
         {
+             Console.WriteLine("|Fazer um Deposito|");
             Console.Write("Digite o numero da conta: ");
             int indiceConta = int.Parse(Console.ReadLine());
 
@@ -110,7 +116,7 @@ namespace TransferenciaBancaria
                 Console.Write("Nenhuma conta Cadastrada");
             }
 
-            Console.WriteLine("Listando Contas: ");
+            Console.WriteLine("|Listando Contas|");
 
             for(int i =0; i < cont; i++){
 
